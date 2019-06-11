@@ -1,0 +1,98 @@
+* {
+  font-family: 'Noto Serif', serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:lightgray;
+}
+
+.separador {
+  margin-top: 50px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.chain i {
+  position: absolute;
+  top: -50px;
+  right: 250px;
+  height: 100px;
+  width: 100px; 
+  background-color: #f35345;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 25px;
+  z-index: 100;
+  color: white;
+}
+
+hr {
+  height: 10px;
+  background-color: #f35345;
+  border: none;
+  margin: 0;
+}
+
+article {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 20px;
+}
+
+
+
+h2 {
+  color: #f35345;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+.image {
+  width: 30%;
+  margin-right: 15px;
+}
+
+img {
+  width: 100%;
+}
+
+.text {  
+  width: 70%;
+  float: right;
+  height: 174px;
+}
+
+p {
+  color: #6a7780;
+  height: 100%;
+  margin-top: 0px;
+  text-align: justify;
+}
+
+p span {
+  display: block;
+  color: gray;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer div {
+  font-size: 0.85rem;
+  color: rgb(180, 174, 174);
+  margin-right: 15px;
+  font-weight: bold;
+}

@@ -1,0 +1,152 @@
+escribe una función llamada frecuencias que reciba un arreglo y retorne un 
+// objeto con el número de veces que aparece cada elemento en el arreglo
+
+function frecuencias(arr){
+ 
+ const obj = {}  
+  
+ for(let i=0; i<arr.length; i++){
+
+	let nombre = arr[i];
+
+	obj[nombre] = (obj[nombre] || 0) + 1
+  
+	}
+
+	return obj
+
+	}
+
+console.log(frecuencias(["juan", "pedro", "juan"]));
+// { juan: 2, pedro: 1 }
+
+console.log(frecuencias(["maria"]));
+// { maria: 1 } */
+
+
+// escribe una funcion arregloAObjeto que reciba un arreglo y devuelva un objeto 
+// utilizando el valor de cada elemento del arreglo como llave y el índice como valor
+
+function arregloAObjeto(arr){
+  const obj = {};
+  for(let i=0; i<arr.length; i++){
+    let nombre = arr[i];
+    obj[nombre] = i;
+  }
+  return obj;
+}
+console.log(arregloAObjeto(["pedro", "pablo", "maria"]));
+// { pedro: 0, pablo: 1, maria: 2 }
+
+function numDuplicados(str){  
+    let arr = str.split("")  
+    
+    const obj = {}  
+    let ret = []
+     
+    for(let i=0; i<arr.length; i++){   
+       let nombre = arr[i];   
+       obj[nombre] = (obj[nombre] || 0) + 1 
+       for(const prop in obj){
+            ret = obj[prop]
+        }    
+    }        
+    return ret
+}
+console.log(numDuplicados("abcaa"));
+
+
+var numJewelsInStones = function(J, S) {
+    obj1 = {}
+    obj2 = {}
+    count = 0
+    for(let i = 0; i<J.length; i++){
+        let key = J[i]
+        obj1[key] = (obj1[key] || 0) + 1
+    }
+    for(let j = 0; j<S.length; j++){
+        let key = S[j]
+        obj2[key] = (obj2[key] || 0) + 1
+    }
+    for(key in obj1){
+        for(key2 in obj2){
+            if(obj2[key2] === obj1[key]){
+                count ++
+            }
+        }
+    }
+    return count
+};
+numJewelsInStones("aA", "aAAbbbb")
+/////
+var isAnagram = function(s, t) {
+    obj1 = {}
+    obj2 = {}    
+    if(s.length !== t.length){
+        return false
+    } else {
+        for(let i in s){
+            if(s[i] === ""){
+                obj1[und] = 0
+            }
+            else if (obj1[s[i]] === undefined) {            
+            obj1[s[i]] = 1;
+            } else {
+            obj1[s[i]] += 1  
+            }
+        }
+        for (let j in t){
+            if(t[j] === ""){
+                obj2[und] = 0
+            }
+            else if(obj2[t[j]] === undefined){
+                obj2[t[j]] = 1
+            } else {            
+            obj2[t[j]] += 1
+            }
+        }
+        for (let c in obj1){
+            return obj1[c] === obj2[c]
+        }
+    }
+};
+
+var threeSum = function(nums) {    
+    nArr = []
+    nArr = nArr.filter(function(item,index,array){
+      return nArr.indexOf(item) === index
+    })
+    var sum = 0
+    for(var i=0; i<nums.length-2; i++){        
+        for(var j=1; j<nums.length-1; j++){          
+            for (var k=2; k<nums.length; k++){                 
+                sum = nums[i]+nums[j]+nums[k]             
+                if(sum === 0 && i !== j && j !== k && i !== k){
+                    nArr.push([nums[i],nums[j],nums[k]])
+                }                
+            }
+        }
+    }
+  return nArr
+};
+
+
+var threeSum = function(nums) {
+    nums = nums.filter(function(item,index,array){
+      return nums.indexOf(item) === index
+    })
+    nArr = []
+    var sum = 0
+    for(var i=0; i<nums.length-2; i++){        
+        for(var j=1; j<nums.length-1; j++){          
+            for (var k=2; k<nums.length; k++){              
+                sum = nums[i]+nums[j]+nums[k]                
+                if(sum === 0){
+                    nArr.push([nums[i],nums[j],nums[k]])
+                }                
+            }
+        }
+    }
+  return nArr
+};
+threeSum([-8, -7, 5 ,2, 2, -1, -1])

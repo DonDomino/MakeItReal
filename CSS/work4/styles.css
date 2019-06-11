@@ -1,0 +1,20 @@
+body {
+    background: linear-gradient(to top left, red, black) no-repeat;  
+    background-attachment: fixed;
+}
+
+div {
+    background-color: white;
+    width: 50vw;
+    margin: 30vh auto;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px black;
+    transform: rotate(-15deg);
+
+    font-size: 3rem;
+    font-family: 'Righteous', cursive;
+    color: red;
+    text-align: center;
+    text-shadow: 3px 3px 10px black;
+}
