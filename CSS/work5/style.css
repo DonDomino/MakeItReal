@@ -1,0 +1,43 @@
+.box {
+    margin: 20vh auto;
+    background-color: black;
+    height: 300px;
+    width: 100px;
+    padding: 20px 0;
+}
+.circle {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin: 20px auto;
+}
+.red {
+    background-color: gray;
+    animation-name: redLight;
+    animation-duration: 5s;
+}
+.yellow {
+    background-color: gray;
+    animation-name: yellowLight;
+    animation-duration: 1s;
+    animation-delay: 5s;
+}
+.green {
+    background-color: gray;
+    animation-name: greenLight;
+    animation-timing-function: ease-out;
+    animation-duration: 5s;
+    animation-delay: 6s;
+}
+@keyframes redLight {
+    0% {background-color: red;}
+    100% {background-color: red;}
+  }
+  @keyframes yellowLight {
+    from {background-color: yellow;}
+    to {background-color: yellow;}
+  }
+  @keyframes greenLight {
+    from {background-color: green;}
+    to {background-color: green;}
+  }
